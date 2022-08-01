@@ -3,7 +3,6 @@ package com.dudu.service;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.dudu.common.CustomException;
-import com.dudu.dto.DishDto;
 import com.dudu.dto.SetmealDto;
 import com.dudu.entity.Setmeal;
 import com.dudu.entity.SetmealDish;
@@ -83,7 +82,7 @@ public class SetmealServiceImpl extends ServiceImpl<SetmealMapper, Setmeal> impl
         LambdaQueryWrapper<Setmeal> queryWrapper1 = new LambdaQueryWrapper<>();
         queryWrapper1.eq(Setmeal::getStatus, 1);
         queryWrapper1.in(Setmeal::getId, ids);
-        int count = this.count(queryWrapper1);
+        int count = (int) this.count(queryWrapper1);
         if (count > 0) {
             //如果不能删除，抛出一个业务异常
             throw new CustomException("套餐正在售卖中，不能删除");

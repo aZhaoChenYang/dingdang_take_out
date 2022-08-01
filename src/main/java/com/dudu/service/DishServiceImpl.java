@@ -6,7 +6,6 @@ import com.dudu.common.CustomException;
 import com.dudu.dto.DishDto;
 import com.dudu.entity.Dish;
 import com.dudu.entity.DishFlavor;
-import com.dudu.entity.Setmeal;
 import com.dudu.mapper.DishMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -91,7 +90,7 @@ public class DishServiceImpl extends ServiceImpl<DishMapper, Dish> implements Di
         LambdaQueryWrapper<Dish> queryWrapper_dish = new LambdaQueryWrapper<>();
         queryWrapper_dish.eq(Dish::getStatus, 1);
         queryWrapper_dish.in(Dish::getId, ids);
-        int count = this.count(queryWrapper_dish);
+        int count = (int) this.count(queryWrapper_dish);
         if (count > 0) {
             throw new CustomException("套餐正在售卖中，不能删除");
         }

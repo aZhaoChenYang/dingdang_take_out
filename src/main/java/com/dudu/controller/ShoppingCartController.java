@@ -4,7 +4,6 @@ package com.dudu.controller;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.dudu.common.BaseContext;
 import com.dudu.common.Result;
-import com.dudu.entity.Category;
 import com.dudu.entity.ShoppingCart;
 import com.dudu.service.ShoppingCartService;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Map;
 
 /**
  * 购物车管理

@@ -3,7 +3,6 @@ package com.dudu.service;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.dudu.dto.DishDto;
 import com.dudu.entity.Dish;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 

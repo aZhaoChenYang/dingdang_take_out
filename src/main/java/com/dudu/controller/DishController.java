@@ -11,12 +11,9 @@ import com.dudu.entity.DishFlavor;
 import com.dudu.service.CategoryService;
 import com.dudu.service.DishFlavorService;
 import com.dudu.service.DishService;
-import com.fasterxml.jackson.databind.util.BeanUtil;
-import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
-import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +22,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
