@@ -1,4 +1,4 @@
-package com.dudu.service;
+package com.dudu.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -7,6 +7,9 @@ import com.dudu.entity.Category;
 import com.dudu.entity.Dish;
 import com.dudu.entity.Setmeal;
 import com.dudu.mapper.CategoryMapper;
+import com.dudu.service.CategoryService;
+import com.dudu.service.DishService;
+import com.dudu.service.SetmealService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

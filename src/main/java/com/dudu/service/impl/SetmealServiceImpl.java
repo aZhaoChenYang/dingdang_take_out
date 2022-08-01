@@ -1,4 +1,4 @@
-package com.dudu.service;
+package com.dudu.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -7,6 +7,8 @@ import com.dudu.dto.SetmealDto;
 import com.dudu.entity.Setmeal;
 import com.dudu.entity.SetmealDish;
 import com.dudu.mapper.SetmealMapper;
+import com.dudu.service.SetmealDishService;
+import com.dudu.service.SetmealService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,7 +18,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class SetmealServiceImpl extends ServiceImpl<SetmealMapper, Setmeal> implements SetmealService{
+public class SetmealServiceImpl extends ServiceImpl<SetmealMapper, Setmeal> implements SetmealService {
     @Resource
     private SetmealDishService setmealDishService;
     @Override

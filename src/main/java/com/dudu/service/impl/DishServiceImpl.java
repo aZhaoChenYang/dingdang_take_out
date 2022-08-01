@@ -1,4 +1,4 @@
-package com.dudu.service;
+package com.dudu.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -7,6 +7,8 @@ import com.dudu.dto.DishDto;
 import com.dudu.entity.Dish;
 import com.dudu.entity.DishFlavor;
 import com.dudu.mapper.DishMapper;
+import com.dudu.service.DishFlavorService;
+import com.dudu.service.DishService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
