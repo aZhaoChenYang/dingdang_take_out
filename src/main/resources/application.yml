@@ -7,9 +7,9 @@ spring:
   datasource:
       # com.mysql.cj.jdbc.Driver对应Mysql8.0
       driver-class-name:  com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost/dingdang?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      url: jdbc:mysql://localhost:3306/dingdang?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: root
-      password: root
+      password: 123456
       #初始化链接数量
       initialSize: 5
       #最小空闲链接数
@@ -28,9 +28,9 @@ spring:
       time-zone: GMT+8
       type: com.alibaba.druid.pool.DruidDataSource
   redis:
-    host: 192.168.0.1
-    port: 3000
-    password: 123456
+    host: 127.0.0.1
+    port: 6379
+    password:
     database: 0
     jedis:
       pool:
